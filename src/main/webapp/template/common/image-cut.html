@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ht1</title>
+  <!--MD5工具类-->
+  <script src="../../static/js/md5.js"></script>
+  <script src="../../static/js/image-cut.js"></script>
+  <link rel="stylesheet" href="../../static/css/image-cut.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <img src="../../static/img/Mpbuttons.4DCFB205.png" style="visibility: hidden;" alt="" id="source">
+
+  <div id="mb-container">
+    <div id="mb-father">
+      <!--    <button onclick="image()"></button>-->
+      <div class="mbuttom" id="div0">
+        <canvas class="can" id="can0"></canvas>
+        <div class="mb-label zh" lang="zh">干员档案</div>
+        <div class="mb-label en" lang="en">OPERATORS</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div1">
+        <canvas class="can" id="can1"></canvas>
+        <div class="mb-label zh" lang="zh">敌人档案</div>
+        <div class="mb-label en" lang="en">ENEMIES</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div2">
+        <canvas class="can" id="can4"></canvas>
+        <div class="mb-label zh" lang="zh">道具资料</div>
+        <div class="mb-label en" lang="en">DEPOT</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div3">
+        <canvas class="can" id="can8"></canvas>
+        <div class="mb-label zh" lang="zh">后勤技能</div>
+        <div class="mb-label en" lang="en">LOGISTICS</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div4">
+        <canvas class="can" id="can2"></canvas>
+        <div class="mb-label zh" lang="zh">关卡一览</div>
+        <div class="mb-label en" lang="en">OPERATIONS</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div5">
+        <canvas class="can" id="can11"></canvas>
+        <div class="mb-label zh" lang="zh">剧情记录</div>
+        <div class="mb-label en" lang="en">STORIES</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div6">
+        <canvas class="can" id="can12"></canvas>
+        <div class="mb-label zh" lang="zh">家具一览</div>
+        <div class="mb-label en" lang="en">FURNITURE</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div7">
+        <canvas class="can" id="can10"></canvas>
+        <div class="mb-label zh" lang="zh">时装回廊</div>
+        <div class="mb-label en" lang="en">OUTFITS</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div8">
+        <canvas class="can" id="can9"></canvas>
+        <div class="mb-label zh" lang="zh">采购中心</div>
+        <div class="mb-label en" lang="en">STORE</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div9">
+        <canvas class="can" id="can6"></canvas>
+        <div class="mb-label zh" lang="zh">卡池一览</div>
+        <div class="mb-label en" lang="en">HEADHUNTS</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div10">
+        <canvas class="can" id="can3"></canvas>
+        <div class="mb-label zh" lang="zh">活动一览</div>
+        <div class="mb-label en" lang="en">EVENTS</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+      <div class="mbuttom" id="div11">
+        <canvas class="can" id="can5"></canvas>
+        <div class="mb-label zh" lang="zh">公招计算</div>
+        <div class="mb-label en" lang="en">RECRUIT</div>
+        <img src="../../static/img/Mpbutton-mask.png" alt="">
+        <!-- <canvas class="can1" id="can1_0"></canvas> -->
+        <a href="#" class="mb-url" title="干员档案"></a>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
