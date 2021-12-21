@@ -1,0 +1,114 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+  z-index: 0;
+}
+body {
+  background-color: gray;
+}
+div {
+  float: left;
+}
+#mb-container {
+  width: 100%;
+  overflow: hidden;
+}
+#mb-father {
+  position: relative;
+  left: 50%;
+  transform-origin: top left;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 920px;
+  /* height: auto; */
+}
+#mb-father:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.mbuttom {
+  display: inline-block;
+  /* display: block;
+  float: left; */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 2px;
+  background-color: #343434;
+  transition: 0.5s;
+}
+.mbuttom img {
+  /* border: 1px solid red; */
+  position: absolute;
+  opacity: 80%;
+  z-index: 1;
+  background-color: #343434;
+  float: left;
+  /* filter: blur(10px); */
+}
+.mbuttom:hover img {
+  transition: 0.5s;
+  background-color: rgb(102, 177, 250);
+  filter: drop-shadow(0, 0, 0, 10px);
+  -webkit-filter: drop-shadow(0, 0, 0, 10px);
+}
+.can,
+.can1 {
+  position: absolute;
+}
+.can {
+  left: 27px;
+  top: 16px;
+  float: left;
+  z-index: 2;
+  filter: drop-shadow(0px 18px 6px rgba(255, 255, 255, 0.5));
+  /* opacity: 50%; */
+}
+.can1 {
+  float: left;
+  left: 25px;
+  top: 30px;
+  filter: blur(5px);
+  /* background-color: #39c5bb; */
+  /* z-index: 1; */
+}
+.mb-label {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  font-family: "微软雅黑", sans-serif;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+.mb-label.zh {
+  opacity: 1;
+}
+.mb-label.en {
+  opacity: 0;
+}
+.mbuttom:hover .mb-label.zh {
+  opacity: 0;
+}
+.mbuttom:hover .mb-label.en {
+  opacity: 1;
+}
+.mb-url {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  display: block;
+  /* text-decoration-color: initial; */
+  color: rgb(102, 177, 250);
+  /* background-color: initial; */
+}
