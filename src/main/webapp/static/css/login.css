@@ -91,7 +91,7 @@ body {
 /* vaild：判断是否合法 */
 .loginForm .loginBox input:focus + label,
 .loginForm .loginBox input:valid + label {
-  top: -25px;
+  top: -20px;
   color: rgb(104, 156, 201);
   font-size: 12px;
 }
