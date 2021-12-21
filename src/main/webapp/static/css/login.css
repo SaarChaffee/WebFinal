@@ -56,12 +56,12 @@ body {
   margin-bottom: 30px;
 }
 
-.loginForm .login_box {
+.loginForm .loginBox {
   position: relative;
   width: 100%;
 }
 
-.loginForm .login_box input {
+.loginForm .loginBox input {
   display: block;
   outline: none;
   border: none;
@@ -76,7 +76,7 @@ body {
   background-color: transparent;
 }
 
-.loginForm .login_box label {
+.loginForm .loginBox label {
   position: absolute;
   top: 0;
   left: 5%;
@@ -89,8 +89,8 @@ body {
 
 /* focus：获得焦点时触发 */
 /* vaild：判断是否合法 */
-.loginForm .login_box input:focus + label,
-.loginForm .login_box input:valid + label {
+.loginForm .loginBox input:focus + label,
+.loginForm .loginBox input:valid + label {
   top: -25px;
   color: rgb(104, 156, 201);
   font-size: 12px;
