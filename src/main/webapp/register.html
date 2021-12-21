@@ -15,7 +15,35 @@
 </head>
 
 <body>
-    body
+    <div class="registerBody">
+        <div class="registerForm">
+            <div class="register_box">
+                <input type="text" id="userName" required name="userName">
+                <label for="userName">用户名</label>
+            </div>
+            <div class="register_box">
+                <input type="password" id="passName" required name="passName">
+                <label for="passName">密码</label>
+            </div>
+            <div class="register_box">
+                <input type="password" id="curPassName" required name="curPassName">
+                <label for="curPassName">再次输入密码</label>
+            </div>
+            <div class="register_box">
+                <input type="text" id="vCode" required name="验证码">
+                <label for="cCode">验证码</label>
+                <canvas id="can"></canvas>
+            </div>
+            <a href="javascript:void(0)" id="register">
+                注册
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <a href="javascript:void(0)" id="reLogin">返回登录</a>
+        </div>
+    </div>
 </body>
 
 </html>
