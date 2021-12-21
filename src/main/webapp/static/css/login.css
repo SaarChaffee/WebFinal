@@ -52,7 +52,7 @@ body {
 }
 
 .loginForm h2 {
-  color: white;
+  color: rgb(104, 156, 201);
   margin-bottom: 30px;
 }
 
@@ -62,23 +62,26 @@ body {
 }
 
 .loginForm .login_box input {
+  display: block;
   outline: none;
   border: none;
+  /* border-radius: 2.5rem;
+  border: 1px solid rgb(104, 156, 201); */
   width: 100%;
   padding: 10px 0;
   margin-bottom: 30px;
   color: white;
   font-size: 16px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(104, 156, 201);
   background-color: transparent;
 }
 
 .loginForm .login_box label {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5%;
   padding: 10px 0;
-  color: white;
+  color: rgb(104, 156, 201);
   /* 点击事件改为无 ，让它能看不能点*/
   pointer-events: none;
   transition: all 0.5s;
@@ -88,7 +91,7 @@ body {
 /* vaild：判断是否合法 */
 .loginForm .login_box input:focus + label,
 .loginForm .login_box input:valid + label {
-  top: -20px;
+  top: -25px;
   color: rgb(104, 156, 201);
   font-size: 12px;
 }
