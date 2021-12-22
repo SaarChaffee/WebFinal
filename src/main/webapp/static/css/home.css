@@ -1,3 +1,8 @@
+@font-face {
+  font-family: slick;
+  src: url("../font/slick.woff");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +66,7 @@ body #mw-head {
 }
 
 #mw-panel {
+  z-index: 1;
   position: absolute;
   font-size: inherit;
   top: 0;
@@ -220,9 +226,9 @@ div#MenuSidebar a {
 
 .container {
   width: 100%;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -275,27 +281,37 @@ div#MenuSidebar a {
 }
 
 #warp .arrow a {
+  font-family: slick;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  display: block;
   width: 40px;
-  height: 70px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  user-select: none;
-  font-size: 30px;
+  height: 40px;
+  color: #eaeaea;
+  font-size: 40px;
   text-align: center;
-  line-height: 70px;
+  line-height: 40px;
   text-decoration: none;
+  display: block;
+  transition: all 0.5s;
+  opacity: 0;
+  text-shadow: 0 5px 10px black;
 }
 
 #warp .arrow a.left {
-  left: 0;
+  left: 5px;
+}
+
+#warp .arrow a.left::before {
+  content: "←";
 }
 
 #warp .arrow a.right {
-  right: 0;
+  right: 5px;
+}
+
+#warp .arrow a.right::before {
+  content: "→";
 }
 
 #warp ul {
@@ -303,29 +319,67 @@ div#MenuSidebar a {
 }
 
 .circle-list {
-  display: flex;
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 240px;
-  height: 40px;
+  right: 30px;
+  bottom: 10px;
+  display: block;
+  list-style: none;
+  text-align: center;
   z-index: 8;
 }
 
-.circle-list > .circle {
-  margin: 0px 5px;
-  width: 40px;
-  height: 40px;
-  background-color: #ecf0f1;
-  border-radius: 50%;
+.circle-list li {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 5px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+  background-color: #eaeaea;
 }
 
-.circle-list > .circle.active {
+.circle-list li.active {
   background-color: #39c5bb;
 }
 
+#warp:hover .arrow a {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+#warp:hover .arrow .left:hover {
+  transition: 0.3s;
+  color: white;
+  filter: drop-shadow(0px 0px 6px white);
+}
+
+#warp:hover .arrow .right:hover {
+  transition: 0.3s;
+  color: white;
+  filter: drop-shadow(0px 0px 6px white);
+}
+
+#warp:hover .circle {
+  transition: 0.3s;
+  height: 10px;
+}
+
+#warp:hover .circle.active:hover {
+  transition: 0.3s;
+  color: #39c5bb;
+  filter: drop-shadow(0px 0px 6px #39c5bb);
+}
+
+#warp:hover .circle:hover {
+  transition: 0.3s;
+  color: white;
+  filter: drop-shadow(0px 0px 6px white);
+}
+
 #mb-container {
+  position: absolute;
+  top: 350px;
   width: 100%;
   overflow: hidden;
 }
