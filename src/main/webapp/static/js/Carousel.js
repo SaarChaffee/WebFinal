@@ -3,7 +3,7 @@ function lunbo() {
   let oRight = document.querySelector(".right");
   let oImgList = document.querySelector(".img-list");
   const oCircle = document.querySelector(".circle-list");
-  let cloneFirstImg = oImgList.firstElementChild.cloneNode();
+  let cloneFirstImg = oImgList.firstElementChild.cloneNode(true);
   const oWarp = document.getElementById("warp");
   oImgList.appendChild(cloneFirstImg);
   
