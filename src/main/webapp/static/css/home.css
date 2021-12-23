@@ -236,7 +236,7 @@ div#MenuSidebar a {
   transform: translateX(-50%);
 }
 
-#warp {
+#carousel-warp {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -246,7 +246,7 @@ div#MenuSidebar a {
   height: 300px;
 }
 
-#warp .img-list {
+#carousel-warp .img-list {
   display: flex;
   position: relative;
   left: 0;
@@ -255,14 +255,14 @@ div#MenuSidebar a {
   transition: 0.5s ease;
 }
 
-#warp .img-list .image-body {
+#carousel-warp .img-list .image-body {
   /* display: block; */
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-#warp .img-list .image-body img {
+#carousel-warp .img-list .image-body img {
   display: block;
   position: absolute;
   top: 0;
@@ -270,20 +270,20 @@ div#MenuSidebar a {
   transform: translateX(-50%);
 }
 
-#warp .img-list .image-body .img-top {
+#carousel-warp .img-list .image-body .img-top {
   height: 100%;
   width: auto;
   z-index: 1;
   filter: drop-shadow(0 0 10px black);
 }
 
-#warp .img-list .image-body .img-bottom {
+#carousel-warp .img-list .image-body .img-bottom {
   height: auto;
   width: 936px;
   filter: blur(10px);
 }
 
-#warp .arrow a {
+#carousel-warp .arrow a {
   font-family: slick;
   position: absolute;
   top: 50%;
@@ -301,23 +301,23 @@ div#MenuSidebar a {
   text-shadow: 0 5px 10px black;
 }
 
-#warp .arrow a.left {
+#carousel-warp .arrow a.left {
   left: 5px;
 }
 
-#warp .arrow a.left::before {
+#carousel-warp .arrow a.left::before {
   content: "←";
 }
 
-#warp .arrow a.right {
+#carousel-warp .arrow a.right {
   right: 5px;
 }
 
-#warp .arrow a.right::before {
+#carousel-warp .arrow a.right::before {
   content: "→";
 }
 
-#warp ul {
+#carousel-warp ul {
   list-style: none;
 }
 
@@ -346,35 +346,35 @@ div#MenuSidebar a {
   background-color: #39c5bb;
 }
 
-#warp:hover .arrow a {
+#carousel-warp:hover .arrow a {
   transition: 0.3s;
   opacity: 1;
 }
 
-#warp:hover .arrow .left:hover {
+#carousel-warp:hover .arrow .left:hover {
   transition: 0.3s;
   color: white;
   filter: drop-shadow(0px 0px 6px white);
 }
 
-#warp:hover .arrow .right:hover {
+#carousel-warp:hover .arrow .right:hover {
   transition: 0.3s;
   color: white;
   filter: drop-shadow(0px 0px 6px white);
 }
 
-#warp:hover .circle {
+#carousel-warp:hover .circle {
   transition: 0.3s;
   height: 10px;
 }
 
-#warp:hover .circle.active:hover {
+#carousel-warp:hover .circle.active:hover {
   transition: 0.3s;
   color: #39c5bb;
   filter: drop-shadow(0px 0px 6px #39c5bb);
 }
 
-#warp:hover .circle:hover {
+#carousel-warp:hover .circle:hover {
   transition: 0.3s;
   color: white;
   filter: drop-shadow(0px 0px 6px white);
