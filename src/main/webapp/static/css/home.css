@@ -228,7 +228,8 @@ div#MenuSidebar a {
   width: 100%;
   /*border: 1px solid red;*/
   position: absolute;
-  background: url("../img/Bg-mc-icon-demo.png") rgba(248, 248, 248, 0.8);
+  background-image: url("../img/Bg-mc-icon-demo.png");
+  background-color: rgba(248, 248, 248, 0.6);
   background-clip: border-box;
   margin-top: 200px;
   left: 50%;
