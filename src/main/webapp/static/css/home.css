@@ -40,7 +40,7 @@ a {
 
 body #mw-navigation #mw-head {
   background: url("../img/PRTSheadleft.png") left top no-repeat,
-  url("../img/Garanheadright.png") right top repeat-x;
+    url("../img/Garanheadright.png") right top repeat-x;
 }
 
 body #mw-navigation #mw-head:before {
@@ -181,7 +181,7 @@ div#MenuSidebar a {
   z-index: 1;
   background-color: #333;
   box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 40%),
-  -1px -2px 10px 0px rgb(0 0 0 / 40%);
+    -1px -2px 10px 0px rgb(0 0 0 / 40%);
 }
 
 #MenuSidebar > ul > li ul {
@@ -228,7 +228,9 @@ div#MenuSidebar a {
   width: 100%;
   /*border: 1px solid red;*/
   position: absolute;
-  top: 25%;
+  background: url("../img/Bg-mc-icon-demo.png") rgba(248, 248, 248, 0.8);
+  background-clip: border-box;
+  margin-top: 200px;
   left: 50%;
   transform: translateX(-50%);
 }
