@@ -1,22 +1,23 @@
 @font-face {
   font-family: SIYUAN_ULTRALKIGHT;
-  src: url("../font/STHeiti-UltraLight-2.ttc");
+  src: url("/static/font/STHeiti-UltraLight-2.ttc");
 }
 
 @font-face {
   font-family: SIYUAN_MEDIUM;
-  src: url("../font/STHeiti-Medium-4.ttc");
+  src: url("/static/font/STHeiti-Medium-4.ttc");
 }
 
 @font-face {
   font-family: SIYUAN_LIGHT;
-  src: url("../font/STHeiti-Light-3.ttc");
+  src: url("/static/font/STHeiti-Light-3.ttc");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -52,6 +53,7 @@ body {
 }
 
 .loginForm h2 {
+  font-family: SIYUAN_LIGHT;
   color: rgb(104, 156, 201);
   margin-bottom: 30px;
 }
@@ -77,6 +79,7 @@ body {
 }
 
 .loginForm .loginBox label {
+  font-family: SIYUAN_LIGHT;
   position: absolute;
   top: 0;
   left: 5%;
@@ -97,6 +100,7 @@ body {
 }
 
 .loginForm a {
+  font-family: SIYUAN_LIGHT;
   overflow: hidden;
   position: relative;
   padding: 10px 40px;
@@ -174,6 +178,7 @@ body {
     left: 100%;
   }
 }
+
 @keyframes m2 {
   0% {
     top: -100%;
@@ -183,6 +188,7 @@ body {
     top: 100%;
   }
 }
+
 @keyframes m3 {
   0% {
     right: -100%;
@@ -192,6 +198,7 @@ body {
     right: 100%;
   }
 }
+
 @keyframes m4 {
   0% {
     bottom: -100%;

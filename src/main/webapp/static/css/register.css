@@ -1,7 +1,23 @@
+@font-face {
+  font-family: SIYUAN_ULTRALKIGHT;
+  src: url("/static/font/STHeiti-UltraLight-2.ttc");
+}
+
+@font-face {
+  font-family: SIYUAN_MEDIUM;
+  src: url("/static/font/STHeiti-Medium-4.ttc");
+}
+
+@font-face {
+  font-family: SIYUAN_LIGHT;
+  src: url("/static/font/STHeiti-Light-3.ttc");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -31,6 +47,7 @@ body {
 }
 
 .registerForm h2 {
+  font-family: SIYUAN_LIGHT;
   color: rgb(104, 156, 201);
   margin-bottom: 30px;
 }
@@ -49,11 +66,12 @@ body {
   margin-bottom: 30px;
   color: white;
   font-size: 16px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(104, 156, 201);
   background-color: transparent;
 }
 
 .registerForm .registerBox label {
+  font-family: SIYUAN_LIGHT;
   position: absolute;
   top: 0;
   left: 5%;
@@ -71,6 +89,7 @@ body {
 }
 
 .registerForm .registerBox canvas {
+  cursor: pointer;
   display: inline-block;
   position: absolute;
   top: 0;
@@ -81,6 +100,7 @@ body {
 }
 
 .registerForm a {
+  font-family: SIYUAN_LIGHT;
   overflow: hidden;
   position: relative;
   padding: 10px 40px;
@@ -149,6 +169,7 @@ body {
     left: 100%;
   }
 }
+
 @keyframes m2 {
   0% {
     top: -100%;
@@ -158,6 +179,7 @@ body {
     top: 100%;
   }
 }
+
 @keyframes m3 {
   0% {
     right: -100%;
@@ -167,6 +189,7 @@ body {
     right: 100%;
   }
 }
+
 @keyframes m4 {
   0% {
     bottom: -100%;
