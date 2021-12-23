@@ -38,12 +38,12 @@ a {
   background: none;
 }
 
-body #mw-navigation #mw-head {
+body #navigation #head {
   background: url("../img/PRTSheadleft.png") left top no-repeat,
     url("../img/Garanheadright.png") right top repeat-x;
 }
 
-body #mw-navigation #mw-head:before {
+body #navigation #head:before {
   content: "";
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@ body #mw-navigation #mw-head:before {
   box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
 }
 
-body #mw-head {
+body #head {
   position: absolute;
   top: 0;
   right: 0;
@@ -65,7 +65,7 @@ body #mw-head {
   margin-left: 11em;
 }
 
-#mw-panel {
+#panel {
   z-index: 1;
   position: absolute;
   font-size: inherit;
@@ -74,12 +74,12 @@ body #mw-head {
   left: 0;
 }
 
-#mw-panel {
-  padding-left: 0 !important;
-  width: 10.5em !important;
+#panel {
+  padding-left: 0;
+  width: 10.5em;
 }
 
-body #mw-navigation #mw-panel {
+body #navigation #panel {
   top: 48px;
 }
 
@@ -89,7 +89,7 @@ body #mw-navigation #mw-panel {
   margin-bottom: 1em;
 }
 
-.mw-wiki-logo {
+.wiki-logo {
   background-image: url("../img/ak.png");
 }
 
@@ -161,8 +161,8 @@ div#MenuSidebar a {
   font-weight: normal;
 }
 
-#MenuSidebar li.child > a::after,
-#MenuSidebar li.child > b::after {
+#MenuSidebar li.SideBar-List > a::after,
+#MenuSidebar li.SideBar-List > b::after {
   content: url("../img/rightArrow.svg");
   -webkit-font-smoothing: antialiased;
   display: block;
@@ -192,11 +192,11 @@ div#MenuSidebar a {
   transition: 0.2s all ease-in-out;
   z-index: 1;
   background-color: #373737;
-  width: unset !important;
+  width: unset;
   white-space: nowrap;
 }
 
-#MenuSidebar ul li:first-child {
+#MenuSidebar ul li:first-chile {
   box-shadow: none;
 }
 
