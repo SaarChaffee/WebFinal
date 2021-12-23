@@ -87,6 +87,7 @@ tr {
 }
 
 .wikitable {
+  
   min-width: 100%;
   table-layout: fixed;
   text-align: center;
