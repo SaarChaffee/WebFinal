@@ -111,7 +111,7 @@ function carousel() {
   
   let autoplay = setInterval(() => {
     rightBtn();
-  }, 2000);
+  }, 5000);
   
   oWarp.addEventListener("mouseenter", () => {
     clearInterval(autoplay);
@@ -121,7 +121,7 @@ function carousel() {
     clearInterval(autoplay);
     autoplay = setInterval(() => {
       rightBtn();
-    }, 2000);
+    }, 5000);
   });
 }
 
