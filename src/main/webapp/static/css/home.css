@@ -219,6 +219,24 @@ div#MenuSidebar a {
   text-decoration: none;
 }
 
+#MenuSidebar a.selflink {
+  font-weight: bold;
+  color: #f4c430;
+  cursor: default;
+}
+
+#MenuSidebar a.selflink::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #f4c430;
+}
+
 #MenuSidebar a.selflink:hover {
   background-color: inherit;
   color: #f4c430;
