@@ -1,6 +1,6 @@
 @font-face {
   font-family: SIYUAN_LIGHT;
-  src: url("/static/font/STHeiti-Light-3.ttc");
+  src: url("../font/STHeiti-Light-3.ttc");
 }
 
 * {

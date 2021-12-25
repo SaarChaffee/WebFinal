@@ -1,16 +1,16 @@
 @font-face {
   font-family: SIYUAN_ULTRALKIGHT;
-  src: url("/static/font/STHeiti-UltraLight-2.ttc");
+  src: url("../font/STHeiti-UltraLight-2.ttc");
 }
 
 @font-face {
   font-family: SIYUAN_MEDIUM;
-  src: url("/static/font/STHeiti-Medium-4.ttc");
+  src: url("../font/STHeiti-Medium-4.ttc");
 }
 
 @font-face {
   font-family: SIYUAN_LIGHT;
-  src: url("/static/font/STHeiti-Light-3.ttc");
+  src: url("../font/STHeiti-Light-3.ttc");
 }
 
 * {
