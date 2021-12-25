@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRTS wiki</title>
+    <script src="../static/js/jquery-3.6.0.js"></script>
+    <script src="../static/js/template.js"></script>
+    <script src="../static/js/operator_info.js"></script>
+    <link rel="stylesheet" href="../static/css/template.css">
+    <link rel="stylesheet" href="../static/css/operator_info.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="navigation">
+        <div id="head">
+            <nav id="p-personal" class="menu">
+                <div class="menu-content">
+                    <ul class="menu-content-list">
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div id="panel">
+            <div id="p-logo" role="banner">
+                <a title="访问首页" class="wiki-logo" href="#"></a>
+            </div>
+
+            <div id="MenuSidebar">
+                <ul>
+                    <li class="empty-elt"></li>
+                    <li class="SideBar-List"><b>当前活动</b>
+                        <ul>
+                            <li><a href="#" title="风雪过境" one-link-mark="yes">SideStory「风雪过境」</a></li>
+                        </ul>
+                    </li>
+                    <li class="SideBar-List"><b>新增干员
+                            <span style="padding-left:10px;">
+                                <span
+                                    style="font-size:10px;color: #ffffff;background: red;padding-right: 2px;padding-left: 2px;border-radius: 5px;">NEW</span>
+                            </span></b>
+                        <ul>
+                            <li><a href="#" title="灵知" one-link-mark="yes">灵知</a></li>
+                            <li><a href="#" title="极光" one-link-mark="yes">极光</a></li>
+                            <li><a href="#" title="耶拉" one-link-mark="yes">耶拉</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="干员一览" one-link-mark="yes">干员一览</a></li>
+                </ul>
+                <p>菜单
+                </p>
+                <ul>
+                    <li class="SideBar-List"><b>通用</b>
+                        <ul>
+                            <li><a href="#" title="干员一览" one-link-mark="yes">干员一览</a></li>
+                            <li><a href="#" title="敌人一览" one-link-mark="yes">敌人一览</a></li>
+                            <li><a href="#" title="道具一览" one-link-mark="yes">道具一览</a></li>
+                            <li><a href="#" title="后勤技能一览" one-link-mark="yes">后勤技能</a></li>
+                            <li><a href="#" title="关卡一览" one-link-mark="yes">关卡一览</a></li>
+                            <li><a href="#" title="剧情一览" one-link-mark="yes">剧情记录</a></li>
+                            <li><a href="#" title="家具一览" one-link-mark="yes">家具一览</a></li>
+                            <li><a href="#" title="时装回廊" one-link-mark="yes">时装回廊</a></li>
+                            <li><a href="#" title="采购中心" one-link-mark="yes">采购中心</a></li>
+                            <li><a href="#" title="卡池一览" one-link-mark="yes">卡池一览</a></li>
+                            <li><a href="#" title="活动一览" one-link-mark="yes">活动一览</a></li>
+                            <li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="#"
+                                    one-link-mark="yes">公招计算</a></li>
+                        </ul>
+                    </li>
+                    <li class="SideBar-List"><b>档案</b>
+                        <ul>
+                            <li><a href="#" title="画师一览" one-link-mark="yes">画师一览</a></li>
+                            <li><a href="#" title="配音一览" one-link-mark="yes">配音一览</a></li>
+                            <li><a href="#" title="分支一览" one-link-mark="yes">分支一览</a></li>
+                            <li><a href="#" title="干员密录一览" one-link-mark="yes">干员密录</a></li>
+                            <li><a href="#" title="干员模组一览" one-link-mark="yes">干员模组</a></li>
+                            <li><a href="#" title="干员编号一览" one-link-mark="yes">干员编号</a></li>
+                            <li><a href="#" title="角色真名" one-link-mark="yes">角色真名</a></li>
+                            <li><a href="#" title="干员预告" one-link-mark="yes">干员预告</a></li>
+                            <li><a href="#" title="干员专精" one-link-mark="yes">干员专精</a></li>
+                            <li><a href="#" title="干员剧情一览" one-link-mark="yes">干员剧情一览</a></li>
+                            <li><a href="#" title="档案信息一览" one-link-mark="yes">档案信息一览</a></li>
+                        </ul>
+                    </li>
+                    <li class="SideBar-List"><b>玩法</b>
+                        <ul>
+                            <li><a href="#" title="危机合约" one-link-mark="yes">危机合约</a></li>
+                            <li><a href="#" title="集成战略" one-link-mark="yes">集成战略</a></li>
+                            <li><a href="#" title="多维合作" one-link-mark="yes">多维合作</a></li>
+                            <li><a href="#" title="荷谟伊智境" one-link-mark="yes">联锁竞赛</a></li>
+                        </ul>
+                    </li>
+                    <li class="SideBar-List"><b>系统</b>
+                        <ul>
+                            <li><a href="#" title="罗德岛基建" one-link-mark="yes">基建</a></li>
+                            <li><a href="#" title="任务列表" one-link-mark="yes">任务列表</a></li>
+                            <li><a href="#" title="邮件记录" one-link-mark="yes">邮件记录</a></li>
+                            <li><a href="#" title="首页场景一览" one-link-mark="yes">首页场景</a></li>
+                            <li><a href="#" title="光荣之路" one-link-mark="yes">光荣之路</a></li>
+                            <li><a href="#" title="情报处理室" one-link-mark="yes">情报处理室</a></li>
+                        </ul>
+                    </li>
+                    <li class="SideBar-List"><b>扩展</b>
+                        <ul>
+                            <li><a href="#" title="游戏数据基础" one-link-mark="yes">基础数据</a></li>
+                            <li><a href="#" title="作战机制" one-link-mark="yes">作战机制</a></li>
+                            <li><a href="#" title="新人入门" one-link-mark="yes">新人入门</a></li>
+                            <li><a href="#" title="贴士一览" one-link-mark="yes">贴士一览</a></li>
+                            <li><a href="#" class="redirect" title="词汇一览" one-link-mark="yes">词汇一览</a></li>
+                            <li><a href="#" title="制作组通讯" one-link-mark="yes">制作组通讯</a></li>
+                            <li><a href="#" title="剧情角色一览" one-link-mark="yes">剧情角色一览</a></li>
+                            <li><a href="#" title="游戏内容前瞻" one-link-mark="yes">游戏内容前瞻</a></li>
+                            <li><a href="#" title="剧情资源概览" one-link-mark="yes">剧情资源概览</a></li>
+                            <li><a href="#" title="分类:汇总" one-link-mark="yes">各类信息汇总</a></li>
+                        </ul>
+                    </li>
+                    <li class="SideBar-List"><b>趣味</b>
+                        <ul>
+                            <li><a href="#" title="泰拉大典:Index" one-link-mark="yes">泰拉大典</a></li>
+                            <li><a href="#" title="音乐鉴赏" one-link-mark="yes">音乐鉴赏</a></li>
+                            <li><a href="#" title="分类:寻访模拟" one-link-mark="yes">寻访模拟</a></li>
+                            <li><a href="#" title="衍生作品" one-link-mark="yes">衍生作品</a></li>
+                            <li><a href="#" title="光荣之路模拟器" one-link-mark="yes">光荣之路模拟器</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <!-- 不让侧边栏在编辑的时候乱跳（ -->
+                    <div style="width:80%;margin:0 auto;margin-top:20px">
+                        <script>SideBarHold = function () {
+                            }</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="charinfo-container" class="charinfo-container" style="max-width:100%;overflow:hidden;">
+            <div id="charinfo-scaler" style="position: relative; transform-origin: top left;">
+                <div class="outpact anicss">
+                    <div class="inpact anicss">
+                        <div class="all anicss" id="all">
+                            <!-- 普通背景 -->
+                            <!-- 皮肤button -->
+                            <div class="all-wrapper anicss">
+                                <div class="all-wrap anicss">
+                                    <div class="rodesbg" style="display:none;"></div>
+                                    <div class="bg anicss" style="width:1024px;"><img class="anicss bgimg"
+                                            src="../static/img/operatorinfo_bg.png" width="100%" height="100%">
+                                    </div>
+                                    <!-- 皮肤背景 -->
+                                    <div class="skinbg" id="skinbg"
+                                        style="display:none;width:1024px;transform: translateX(0px);transition: all 0.3s ease-in-out;">
+                                        <img class="anicss skinbgimg" src="../static/img/operatorinfo_bg2.png"
+                                            width="100%" height="100%">
+                                    </div>
+                                    <!-- 左上logo -->
+                                    <div class="charlogo">
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp;<div class="deflogo" id="deflogo"><img
+                                                src="../static/img/Logo_karlan.png" width="260px"></div>
+                                    </div>
+                                    <!-- 服装描述 -->
+                                    <div class="explain-wrapper" id="explain-wrapper">
+                                        <div class="explain-title">描述</div>
+                                        <div id="explain-stage0">
+                                            <div class="typewrapper"><span class="explain-type">默认服装</span>
+                                            </div>
+                                            <!--
+                                       -->
+                                            <div class="explain-content">
+                                                干员平时最常穿着的服装。<br>虽然不一定比制服更实用，但是一定是干员最舒适的搭配之一。
+                                            </div>
+                                        </div>
+                                        <div id="explain-stage1" style="display:none">
+                                            <div class="typewrapper"><span class="explain-type">默认服装</span>
+                                            </div>
+                                            <div class="explain-content">
+                                                干员平时最常穿着的服装。<br>虽然不一定比制服更实用，但是一定是干员最舒适的搭配之一。
+                                            </div>
+                                        </div>
+                                        <div id="explain-stage2" style="display:none">
+                                            <div class="typewrapper"><span class="explain-type">默认服装</span>
+                                            </div>
+                                            <div class="explain-content">
+                                                晋升后，经过调整的服装。<br>根据干员的经验，对服装细节进行改进，针对一些作战环境进行了特化处理。在满足战斗需求的同时，最大程度还原各位干员熟悉的舒适穿着体验。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 特性 -->
+                                    <div class="features-wrapper" id="features-wrapper">
+                                        <div class="features-title">特性</div>
+                                        <div class="features-content" id="features0" style="display:block">
+                                            攻击造成<span style="color:#00B0FF;">法术伤害</span></div>
+                                        <div class="features-content" id="features1">
+                                            攻击造成<span style="color:#00B0FF;">法术伤害</span></div>
+                                        <div class="features-content" id="features2">
+                                            攻击造成<span style="color:#00B0FF;">法术伤害</span></div>
+                                    </div>
+                                    <!-- 切换动画矩形 -->
+                                    <div class="anime-bg" id="anime-bg"></div>
+                                    <div id="charinfoparticles" class="charinfoparticles">
+                                        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"
+                                            width="1024" height="576"></canvas>
+                                    </div>
+                                    <!-- 干员立绘 -->
+                                    <div class="charimg-wrapper anicss">
+                                        <div id="charImgmove" onwheel="">
+                                            <div id="img" style="left: 40px; top: 188px;">
+                                                <div id="charimg" class="charimg"
+                                                    style="transform:translateZ(0) scale(2);">
+                                                    <div id="img-stage0" class="charimg-stage" style="display:block">
+                                                        <img src="../static/img/drawing_gnosis.png" width="512px">
+                                                    </div>
+                                                    <div id="img-stage1" class="charimg-stage"><img
+                                                            src="../static/img/drawing_gnosis.png" width="512px">
+                                                    </div>
+                                                    <!--
+                                   -->
+                                                    <div id="img-stage2" class="charimg-stage"
+                                                        style="position:relative;width:512px;height:512px;">
+                                                        <div id="stage2_default" class="anicss"
+                                                            style="opacity:1;position:absolute;top:0;left:0;display:inline-block;width:512px;height:512px">
+                                                            <img src="../static/img/drawing_gnosis_2.png" width="512px">
+                                                        </div>
+                                                        <div id="stage2_dyn" class="anicss"
+                                                            style="opacity:0;position:absolute;top:0;left:0;display:none;width:512px;height:512px">
+                                                            <div id="container"
+                                                                style="width:1000px;height:1000px;transform:scale(0.512, 0.512);transform-origin:left top;">
+                                                                <canvas width="1000" height="1000"
+                                                                    style="width:100%;height:100%"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="charin" class="charleft">
+                                        <!-- 职业logo -->
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp;<div class="charclass anicss" id="charclass"><a href="#"
+                                                one-link-mark="yes"><img src="../static/img/job_branch_weaken.png"
+                                                    width="64px" style="border-radius:3px;"></a></div>
+                                        <div class="charclasspro anicss" id="charclasspro" style="display:none;"><a
+                                                href="#" one-link-mark="yes"><img
+                                                    src="https://prts.wiki/w/%E7%81%B5%E7%9F%A5" width="75px"></a></div>
+                                        <!-- 干员tag1 -->
+                                        <div class="chartag1-wrapper anicss" id="chartag1">
+                                            <div class="chartag1-content"><a href="#" title="削弱"
+                                                    one-link-mark="yes">削弱</a></div>
+                                        </div>
+                                        <!-- 干员tag2 -->
+                                        <div class="chartag2-wrapper anicss" id="chartag2">
+                                            <div class="chartag2-content"><a href="#" title="远程位"
+                                                    one-link-mark="yes">远程位</a></div>
+                                        </div>
+                                        <!-- 干员代号 -->
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp;<div class="charname anicss" id="charname">灵知
+                                        </div>
+                                        <!-- 干员代号英文 -->
+                                        <div class="charname-en anicss" id="charname-en">Gnosis</div>
+                                        <!-- 稀有度 -->
+                                        <div class="star anicss" id="star">
+                                            <div class="starimg"><img src="../static/img/rality_white_6.png"
+                                                    height="38px"></div>
+                                            <div class="limited" id="limited">限定</div>
+                                        </div>
+                                        <!-- 配音 -->
+                                        <div class="cv-wrapper anicss" id="cv-wrapper">
+                                            <div class="cv-bg">
+                                                <div class="cv-logo"><img src="../static/img/mic.png" width="18px">
+                                                </div>
+                                                <!--<div class="cv-title">配音</div>-->
+                                                <div class="cv-content" id="cv-content"><a style="margin-right:10px;"
+                                                        href="#" title="配音一览#刘飞" one-link-mark="yes">刘飞(中配)</a><a
+                                                        href="#" title="配音一览#绿川光" one-link-mark="yes">绿川光(日配)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 画师 -->
+                                        <div class="painter-wrapper anicss" id="painter-wrapper">
+                                            <div class="painter-bg">
+                                                <div class="painter-logo"><img src="../static/img/operatorinfo.png"
+                                                        width="18px"></div>
+                                                <!--<div class="painter-title">画师</div>-->
+                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<div
+                                                    class="painter-content" id="painter-content"><a href="#"
+                                                        title="画师一览#竜崎いち" one-link-mark="yes">竜崎いち</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 精英化button -->
+                                    <div id="stageWrapper" class="stageWrapper">
+                                        <div class="stage0-btn-wrapper" onclick="changeStage0();" id="stage0btn">
+                                            <div class="satge0-btn-bg">
+                                                <div class="stage0-btn-logo"><img src="../static/img/stage_0_big.png"
+                                                        width="50px"></div>
+                                                <div class="stage0-btn-logoafter"><img
+                                                        src="../static/img/stage_0_big_blue.png" width="50px">
+                                                </div>
+                                                <div class="stage0-btn-content">初始</div>
+                                            </div>
+                                        </div>
+                                        <div class="stage1-btn-wrapper" onclick="changeStage1();" id="stage1btn">
+                                            <div class="satge1-btn-bg">
+                                                <div class="stage1-btn-logo"><img src="../static/img/stage_1_big.png"
+                                                        width="50px"></div>
+                                                <div class="stage1-btn-logoafter"><img
+                                                        src="../static/img/stage_1_big_blue.png" width="50px">
+                                                </div>
+                                                <div class="stage1-btn-content">精英一</div>
+                                            </div>
+                                        </div>
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp;<div class="stage2-btn-wrapper" onclick="changeStage2();"
+                                            id="stage2btn">
+                                            <div class="satge2-btn-bg">
+                                                <div class="stage2-btn-logo"><img src="../static/img/stage_2_big.png"
+                                                        width="50px"></div>
+                                                <div class="stage2-btn-logoafter"><img
+                                                        src="../static/img/stage_2_big_blue.png" width="50px">
+                                                </div>
+                                                <div class="stage2-btn-content">精英二</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 看图按钮 -->
+                                    <div id="clearbtn" class="clearbtn" onclick="clearimg();">
+                                        <!--
+                           -->
+                                        <div id="clearui"><img src="../static/img/Charinfo_flod.png" width="25px">
+                                        </div>
+                                        <!--
+                           -->
+                                        <div id="returnui"><img src="../static/img/Charinfo_unflod.png" width="25px">
+                                        </div>
+                                    </div>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <!-- 宽屏按钮 -->
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <div id="widebtn" class="widebtn" onclick="widescreen();">
+                                        <!--
+                           -->
+                                        <div id="wideOn"><img src="../static/img/Charinfo_wideono.png" width="25px">
+                                        </div>
+                                        <!--
+                           -->
+                                        <div id="wideOff"><img src="../static/img/Charinfo_wideoff.png" width="25px">
+                                        </div>
+                                    </div>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <!-- 全屏按钮 -->
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <div id="fullscbtn" class="fullscbtn" onclick="fullscreen();">
+                                        <!--
+                           -->
+                                        <div id="fullOn"><img src="../static/img/Charinfo_fullscreen.png" width="22px">
+                                        </div>
+                                        <!--
+                           -->
+                                        <div id="fullOff"><img src="../static/img/Charinfo_norscreen.png" width="22px">
+                                        </div>
+                                    </div>
+                                    <div id="dynbtn" class="dynbtn" style="top: auto; right: 320px; bottom: 135px;">
+                                        <!--
+                           -->
+                                        <div id="dynOn"><img src="../static/img/Charinfo_active.png" width="35px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
