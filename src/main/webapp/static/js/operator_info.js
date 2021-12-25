@@ -259,6 +259,114 @@ function widescreen() {
     document.getElementById("wideOff").style.display = "none";
   }
 }
+function clearimg() {
+  var dis = document.getElementById("clearui").style.display;
+  if (dis == "none") {
+    document.getElementById("stage0btn").style.borderRadius = "0px";
+    document.getElementById("stage0btn").style.backgroundColor =
+      "rgba(0,0,0,.8)";
+    document.getElementById("stage0btn").style.width = "110px";
+    document.getElementById("stage0btn").style.left = "15px";
+    document.getElementById("stage1btn").style.borderRadius = "0px";
+    document.getElementById("stage1btn").style.backgroundColor =
+      "rgba(0,0,0,.8)";
+    document.getElementById("stage1btn").style.width = "120px";
+    document.getElementById("stage1btn").style.top = "10px";
+    document.getElementById("stage1btn").style.left = "130px";
+    document.getElementById("stage2btn").style.borderRadius = "0px";
+    document.getElementById("stage2btn").style.backgroundColor =
+      "rgba(0,0,0,.8)";
+    document.getElementById("stage2btn").style.width = "120px";
+    document.getElementById("stage2btn").style.top = "10px";
+    document.getElementById("stage2btn").style.left = "255px";
+    document.getElementById("charclass").style.transform = "translateY(0px)";
+    try {
+      document.getElementById("charclasspro").style.transform =
+        "translateY(0px)";
+    } catch (err) {}
+    document.getElementById("chartag1").style.transform = "translateY(0px)";
+    document.getElementById("chartag2").style.transform = "translateY(0px)";
+    document.getElementById("charname").style.transform = "translateX(0px)";
+    document.getElementById("charname-en").style.transform = "translateX(0px)";
+    document.getElementById("star").style.transform = "translateX(0px)";
+    document.getElementById("cv-wrapper").style.transform = "translateX(0px)";
+    document.getElementById("painter-wrapper").style.transform =
+      "translateX(0px)";
+    document.getElementById("explain-wrapper").style.transform =
+      "translateX(0px)";
+    document.getElementById("features-wrapper").style.transform =
+      "translateX(0px)";
+    document.getElementById("returnui").style.display = "none";
+    document.getElementById("clearui").style.display = "block";
+    document.getElementById("clearbtn").style.transform = "translateX(0px)";
+    document.getElementById("dynbtn").style.transform = "translateX(0px)";
+    document.getElementById("widebtn").style.transform = "translateX(0px)";
+    document.getElementById("fullscbtn").style.transform = "translateX(0px)";
+    document
+      .getElementById("charImgmove")
+      .removeEventListener("wheel", ctrlscale);
+
+    document.getElementById("charname-en").style.opacity = "1";
+    document.getElementById("charname").style.opacity = "1";
+    if (document.getElementById("widebtn").style.display == "none") {
+    } else {
+      $(all).unbind("mousewheel");
+    }
+  } else {
+    document.getElementById("stage0btn").style.borderRadius = "5px";
+    document.getElementById("stage0btn").style.backgroundColor =
+      "rgba(0,0,0,.47)";
+    document.getElementById("stage0btn").style.width = "60px";
+    document.getElementById("stage0btn").style.left = "10px";
+    document.getElementById("stage1btn").style.borderRadius = "5px";
+    document.getElementById("stage1btn").style.backgroundColor =
+      "rgba(0,0,0,.47)";
+    document.getElementById("stage1btn").style.width = "60px";
+    document.getElementById("stage1btn").style.top = "55px";
+    document.getElementById("stage1btn").style.left = "10px";
+    document.getElementById("stage2btn").style.borderRadius = "5px";
+    document.getElementById("stage2btn").style.backgroundColor =
+      "rgba(0,0,0,.47)";
+    document.getElementById("stage2btn").style.width = "60px";
+    document.getElementById("stage2btn").style.top = "100px";
+    document.getElementById("stage2btn").style.left = "10px";
+    document.getElementById("charclass").style.transform = "translateY(100px)";
+    try {
+      document.getElementById("charclasspro").style.transform =
+        "translateY(100px)";
+    } catch (err) {}
+    document.getElementById("chartag1").style.transform = "translateY(100px)";
+    document.getElementById("chartag2").style.transform = "translateY(100px)";
+    document.getElementById("charname").style.transform = "translateX(-500px)";
+    document.getElementById("charname-en").style.transform =
+      "translateX(-200px)";
+    document.getElementById("star").style.transform = "translateX(-250px)";
+    document.getElementById("cv-wrapper").style.transform =
+      "translateX(-350px)";
+    document.getElementById("painter-wrapper").style.transform =
+      "translateX(-350px)";
+    document.getElementById("explain-wrapper").style.transform =
+      "translateX(400px)";
+    document.getElementById("features-wrapper").style.transform =
+      "translateX(400px)";
+    document.getElementById("returnui").style.display = "block";
+    document.getElementById("clearui").style.display = "none";
+    document.getElementById("clearbtn").style.transform = "translateX(305px)";
+    document.getElementById("dynbtn").style.transform = "translateX(305px)";
+    document.getElementById("widebtn").style.transform = "translateX(305px)";
+    document.getElementById("fullscbtn").style.transform = "translateX(305px)";
+    document.getElementById("charImgmove").addEventListener("wheel", ctrlscale);
+    if (document.getElementById("widebtn").style.display == "none") {
+    } else {
+      $(all).bind("mousewheel", function (event, delta) {
+        return false;
+      });
+    }
+
+    document.getElementById("charname-en").style.opacity = "0";
+    document.getElementById("charname").style.opacity = "0";
+  }
+}
 function clearstage() {
   document.getElementById("img-stage0").style.display = "none";
   document.getElementById("img-stage1").style.display = "none";
