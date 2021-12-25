@@ -9,7 +9,6 @@ package com.chaffee.webfinal.servlet;
 import com.chaffee.webfinal.pojo.User;
 import com.chaffee.webfinal.service.User.UserService;
 import com.chaffee.webfinal.service.User.UserServiceImpl;
-import com.chaffee.webfinal.util.Constans;
 import com.google.gson.Gson;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -45,19 +44,27 @@ public class UserServlet extends HttpServlet {
   protected void login( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
     String userName = req.getParameter( "userName" );
     String passName = req.getParameter( "passName" );
-    boolean flag = false;
+    Map<String, String> resultMap = new HashMap<>();
     User user = null;
     UserService userService = new UserServiceImpl();
     
     user = userService.getUser( userName, passName );
     
     if( user != null ){
-      req.getSession().setAttribute( Constans.USER_SESSION, user );
-      resp.sendRedirect( req.getContextPath() + "/template/home.html" );
+      resultMap.put( "result", "success" );
     }
     else{
-      req.setAttribute( "error", "用户名或密码错误" );
-      req.getRequestDispatcher( "/login.html" ).forward( req, resp );
+      resultMap.put( "result", "wrong" );
+    }
+    PrintWriter out = resp.getWriter();
+    try{
+      resp.setContentType( "application/json" );
+      Gson gson = new Gson();
+      String json = gson.toJson( resultMap );
+      out.write( json );
+    }finally{
+      out.flush();
+      out.close();
     }
   }
   
