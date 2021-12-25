@@ -25,15 +25,17 @@ public class UserServlet extends HttpServlet {
       case "login" -> {
         this.login( req, resp );
       }
-      case "register" -> {
-        this.register( req, resp );
-      }
     }
   }
   
   @Override
   protected void doPost( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
-  
+    String method = req.getParameter( "method" );
+    switch( method ){
+      case "register" -> {
+        this.register( req, resp );
+      }
+    }
   }
   
   protected void login( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
