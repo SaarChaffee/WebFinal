@@ -337,3 +337,6 @@ table.wikitable > * > tr > th {
   background-color: #eaecf0;
   text-align: center;
 }
+.wikitable tr td div a div:hover {
+  text-decoration: underline;
+}
