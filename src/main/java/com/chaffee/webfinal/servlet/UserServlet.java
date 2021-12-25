@@ -10,12 +10,16 @@ import com.chaffee.webfinal.pojo.User;
 import com.chaffee.webfinal.service.User.UserService;
 import com.chaffee.webfinal.service.User.UserServiceImpl;
 import com.chaffee.webfinal.util.Constans;
+import com.google.gson.Gson;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserServlet extends HttpServlet {
   @Override
@@ -62,16 +66,24 @@ public class UserServlet extends HttpServlet {
     String passName = req.getParameter( "passName" );
     boolean flag = false;
     UserService userService = new UserServiceImpl();
-    
+    Map<String, String> resultMap = new HashMap<>();
     flag = userService.addUser( userName, passName );
     
     if( flag ){
-      req.setAttribute( "result", "success" );
-      req.getRequestDispatcher( "/register.html" ).forward( req, resp );
+      resultMap.put( "result", "success" );
     }
     else{
-      req.setAttribute( "result", "fault" );
-      req.getRequestDispatcher( "/register.html" ).forward( req, resp );
+      resultMap.put( "result", "fault" );
+    }
+    PrintWriter out = resp.getWriter();
+    try{
+      resp.setContentType( "application/json" );
+      Gson gson = new Gson();
+      String json = gson.toJson( resultMap );
+      out.write( json );
+    }finally{
+      out.flush();
+      out.close();
     }
   }
 }
