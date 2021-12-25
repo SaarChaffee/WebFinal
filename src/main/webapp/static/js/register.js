@@ -126,7 +126,7 @@ $(function () {
       console.log("re1");
       $.ajax({
         type: "POST",
-        url: "/template/user.do",
+        url: "/user.do",
         data: {
           method: "register",
           userName: userName.val(),
