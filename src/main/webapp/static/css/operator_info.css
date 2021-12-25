@@ -88,20 +88,6 @@ body #navigation #head {
   transform: translateX(0px);
   transition: all 0.3s ease-in-out;
 }
-.skinbutton-wrapper {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  width: 300px;
-  height: 240px;
-  background-color: rgba(49, 49, 49, 0);
-  overflow: scroll;
-  z-index: 998;
-  scrollbar-width: none;
-  transform: translateX(0px);
-  transition: all 0.3s ease-in-out;
-  overflow: scroll;
-}
 .all {
   width: 1024px;
   height: 576px;
@@ -124,6 +110,9 @@ body #navigation #head {
   cursor: pointer;
   display: none;
   transition: all 0.3s ease-in-out;
+}
+.thidebtn:hover {
+  box-shadow: 0 0 10px #fff;
 }
 .skinnoinfo {
   width: 230px;
@@ -354,6 +343,13 @@ body #navigation #head {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+.chartag1-content > a:hover {
+  color: #00b0ff;
+}
+
+.chartag1-contentpro > a:hover {
+  color: #00b0ff;
+}
 .chartag2-wrapper {
   position: absolute;
   left: 100px;
@@ -375,6 +371,13 @@ body #navigation #head {
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+}
+.chartag2-content > a:hover {
+  color: #00b0ff;
+}
+
+.chartag2-contentpro > a:hover {
+  color: #00b0ff;
 }
 .charname {
   position: absolute;
@@ -466,7 +469,10 @@ body #navigation #head {
   white-space: nowrap;
   margin-right: 10px;
 }
-
+.cv-content > a:hover {
+  color: #00b0ff;
+  border-color: #00b0ff;
+}
 .painter-wrapper {
   position: absolute;
   left: 18px;
@@ -506,6 +512,10 @@ body #navigation #head {
   border-bottom: 1px dashed white;
   transition: all 0.3s ease-in-out;
   /* margin-right: 10px; */
+}
+.painter-content > a:hover {
+  color: #00b0ff;
+  border-color: #00b0ff;
 }
 .stage0-btn-wrapper {
   position: absolute;
@@ -547,6 +557,17 @@ body #navigation #head {
   top: 7px;
   font-size: 16px;
 }
+.stage0-btn-wrapper:hover {
+  color: #22bbff;
+}
+
+.stage0-btn-wrapper:hover .stage0-btn-logo {
+  display: none;
+}
+
+.stage0-btn-wrapper:hover .stage0-btn-logoafter {
+  display: block;
+}
 .stage1-btn-wrapper {
   position: absolute;
   top: 10px;
@@ -586,6 +607,17 @@ body #navigation #head {
   right: 10px;
   top: 7px;
   font-size: 16px;
+}
+.stage1-btn-wrapper:hover {
+  color: #22bbff;
+}
+
+.stage1-btn-wrapper:hover .stage1-btn-logo {
+  display: none;
+}
+
+.stage1-btn-wrapper:hover .stage1-btn-logoafter {
+  display: block;
 }
 .stage2-btn-wrapper {
   position: absolute;
@@ -627,6 +659,17 @@ body #navigation #head {
   top: 7px;
   font-size: 16px;
 }
+.stage2-btn-wrapper:hover {
+  color: #22bbff;
+}
+
+.stage2-btn-wrapper:hover .stage2-btn-logo {
+  display: none;
+}
+
+.stage2-btn-wrapper:hover .stage2-btn-logoafter {
+  display: block;
+}
 .clearbtn {
   width: 35px;
   height: 35px;
@@ -638,6 +681,9 @@ body #navigation #head {
   box-shadow: 0 0 10px #000;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.clearbtn:hover {
+  box-shadow: 0 0 10px #fff;
 }
 #clearui {
   padding-top: 5px;
@@ -660,6 +706,9 @@ body #navigation #head {
   box-shadow: 0 0 10px #000;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.widebtn:hover {
+  box-shadow: 0 0 10px #fff;
 }
 #wideOn {
   padding-top: 5px;
@@ -684,6 +733,9 @@ body #navigation #head {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+.fullscbtn:hover {
+  box-shadow: 0 0 10px #fff;
+}
 #fullOn {
   padding-top: 5px;
   padding-left: 7px;
@@ -706,4 +758,7 @@ body #navigation #head {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   display: none;
+}
+.dynbtn:hover {
+  box-shadow: 0 0 10px #fff;
 }
