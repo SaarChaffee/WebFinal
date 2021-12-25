@@ -11,26 +11,26 @@ $(function () {
   var passName = $("#passName");
   var passNameLabel = $("#passNameLabel");
   var login = $("#login");
-
+  
   userName
-    .on("focus", function () {
-      userNameLabel.text("请输入用户名");
-      vCodeLabel.css({ color: "#70A4CC" });
-    })
-    .on("blur", function () {
-      userNameLabel.text("用户名");
-      vCodeLabel.css({ color: "#70A4CC" });
-    });
+      .on("focus", function () {
+        userNameLabel.text("请输入用户名");
+        vCodeLabel.css({color: "#70A4CC"});
+      })
+      .on("blur", function () {
+        userNameLabel.text("用户名");
+        vCodeLabel.css({color: "#70A4CC"});
+      });
   passName
-    .on("focus", function () {
-      passNameLabel.text("请输入密码");
-      vCodeLabel.css({ color: "#70A4CC" });
-    })
-    .on("blur", function () {
-      passNameLabel.text("密码");
-      vCodeLabel.css({ color: "#70A4CC" });
-    });
-
+      .on("focus", function () {
+        passNameLabel.text("请输入密码");
+        vCodeLabel.css({color: "#70A4CC"});
+      })
+      .on("blur", function () {
+        passNameLabel.text("密码");
+        vCodeLabel.css({color: "#70A4CC"});
+      });
+  
   login.on("click", function () {
     if (userName.val() === null || userName.val() === "") {
       userName.focus();
@@ -49,13 +49,12 @@ $(function () {
         success: function (response) {
           if (response.result === "success") {
             alert("登陆成功，按确定进入主页");
-            $(location).attr({ href: "template/home.html" });
-          } else if (response.result === "wrong user") {
-            userNameLabel.text("用户不存在，请重新输入");
-            vCodeLabel.css({ color: "#f00" });
-          } else if (response.result === "wrong passwd") {
-            passNameLabel.text("密码错误，请重新输入");
-            vCodeLabel.css({ color: "#f00" });
+            $(location).attr({href: "template/home.html"});
+          } else if (response.result === "wrong") {
+            userNameLabel.text("用户名或密码错误");
+            userNameLabel.css({color: "#f00"});
+            passNameLabel.text("用户名或密码错误");
+            passNameLabel.css({color: "#f00"});
           }
         },
       });
