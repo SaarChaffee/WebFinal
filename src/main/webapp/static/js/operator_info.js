@@ -560,6 +560,7 @@ function fullscreen() {
       return false;
     });
     document.getElementsByTagName("body")[0].style.margin = "0";
+    document.getElementById("navigation").style.display = "none";
     document.getElementsByClassName("container")[0].style.margin = "0";
     document.getElementsByClassName("outpact")[0].style.width = "100vw";
     document.getElementsByClassName("outpact")[0].style.height = "100vh";
@@ -606,6 +607,7 @@ function fullscreen() {
 }
 function refullscreen() {
   document.getElementsByTagName("body")[0].style.margin = "20px 0";
+  document.getElementById("navigation").style.display = "block";
   document.getElementsByClassName("container")[0].style.margin = "200px 0";
   document.getElementsByClassName("outpact")[0].style.width = "1024px";
   document.getElementsByClassName("outpact")[0].style.height = "576px";
