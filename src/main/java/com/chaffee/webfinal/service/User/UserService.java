@@ -9,5 +9,7 @@ package com.chaffee.webfinal.service.User;
 import com.chaffee.webfinal.pojo.User;
 
 public interface UserService {
-  public User getUser(String userName,String Password);
+  public User getUser( String username, String password );
+  
+  public boolean addUser( String username, String password );
 }

@@ -15,32 +15,55 @@ import com.mysql.cj.util.StringUtils;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
   private UserDao userDao;
   
-  public UserServiceImpl(){
-    userDao=new UserDaoImpl();
+  public UserServiceImpl() {
+    userDao = new UserDaoImpl();
   }
   
   @Override
-  public User getUser( String userName, String Password ) {
-    User user=null;
-    Connection connection=null;
+  public User getUser( String username, String password ) {
+    User user = null;
+    Connection connection = null;
     
     try{
-      if( userName != null ){
-        connection= BaseDao.getConnection();
-        user = userDao.getUser( connection, userName );
+      if( username != null ){
+        connection = BaseDao.getConnection();
+        user = userDao.getUser( connection, username );
       }
     }catch( SQLException e ){
       e.printStackTrace();
     }finally{
-      BaseDao.close( connection,null,null );
+      BaseDao.close( connection, null, null );
     }
-    if( user != null && !StringUtils.isNullOrEmpty( Password ) && Password.equals( user.getPassWord() ) ){
+    if( user != null && !StringUtils.isNullOrEmpty( password ) && password.equals( user.getPassWord() ) ){
       return user;
-    }else{
+    }
+    else{
       return null;
     }
+  }
+  
+  @Override
+  public boolean addUser( String username, String password ) {
+    Connection connection = null;
+    int result = 0;
+    boolean flag = false;
+    
+    try{
+      if( username != null ){
+        connection = BaseDao.getConnection();
+        result = userDao.addUser( connection, username, password );
+      }
+    }catch( SQLException e ){
+      e.printStackTrace();
+    }finally{
+      BaseDao.close( connection, null, null );
+    }
+    if( result > 0 ){
+      flag = true;
+    }
+    return flag;
   }
 }
