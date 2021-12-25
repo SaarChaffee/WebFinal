@@ -28,6 +28,9 @@ public class UserServlet extends HttpServlet {
       case "login" -> {
         this.login( req, resp );
       }
+      case "isUserExist" -> {
+        this.isUserExist( req, resp );
+      }
     }
   }
   
@@ -81,6 +84,31 @@ public class UserServlet extends HttpServlet {
     }
     else{
       resultMap.put( "result", "fault" );
+    }
+    PrintWriter out = resp.getWriter();
+    try{
+      resp.setContentType( "application/json" );
+      Gson gson = new Gson();
+      String json = gson.toJson( resultMap );
+      out.write( json );
+    }finally{
+      out.flush();
+      out.close();
+    }
+  }
+  
+  protected void isUserExist( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
+    String username = req.getParameter( "username" );
+    boolean flag = true;
+    UserService userService = new UserServiceImpl();
+    Map<String, String> resultMap = new HashMap<>();
+    flag = userService.isUserExist( username );
+    
+    if( flag ){
+      resultMap.put( "result", "used" );
+    }
+    else{
+      resultMap.put( "result", "free" );
     }
     PrintWriter out = resp.getWriter();
     try{

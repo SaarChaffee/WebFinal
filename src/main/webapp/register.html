@@ -2,49 +2,49 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注册</title>
-    <script type='text/javascript' src='static/js/jquery-3.6.0.js'></script>
-    <script type='text/javascript' src='static/js/jquery.particleground.js'></script>
-    <script src="static/js/register.js"></script>
-    <link rel="stylesheet" href="static/css/register.css">
-    <style>
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <script type='text/javascript' src='static/js/jquery-3.6.0.js'></script>
+  <script type='text/javascript' src='static/js/jquery.particleground.js'></script>
+  <script src="static/js/register.js"></script>
+  <link rel="stylesheet" href="static/css/register.css">
+  <style>
+  </style>
 </head>
 
 <body>
-    <div class="registerBody">
-        <div class="registerForm">
-            <h2>注册</h2>
-            <div class="registerBox">
-                <input type="text" id="userName" required name="userName">
-                <label for="userName">用户名</label>
-            </div>
-            <div class="registerBox">
-                <input type="password" id="passName" required name="passName">
-                <label id="passNameLabel" for="passName">密码</label>
-            </div>
-            <div class="registerBox">
-                <input type="password" id="curPassName" required name="curPassName">
-                <label id="curPassNameLabel" for="curPassName">再次输入密码</label>
-            </div>
-            <div class="registerBox">
-                <input type="text" id="vCode" required name="验证码">
-                <label id="vCodeLabel" for="cCode">验证码</label>
-                <canvas id="can" onclick="drawCode()"></canvas>
-            </div>
-            <a style="cursor: pointer;" id="register">
-                注册
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <a href="login.html" id="reLogin">返回登录</a>
-        </div>
+<div class="registerBody">
+  <div class="registerForm">
+    <h2>注册</h2>
+    <div class="registerBox">
+      <input type="text" id="userName" required name="userName">
+      <label id="userNameLabel" for="userName">用户名</label>
     </div>
+    <div class="registerBox">
+      <input type="password" id="passName" required name="passName">
+      <label id="passNameLabel" for="passName">密码</label>
+    </div>
+    <div class="registerBox">
+      <input type="password" id="curPassName" required name="curPassName">
+      <label id="curPassNameLabel" for="curPassName">再次输入密码</label>
+    </div>
+    <div class="registerBox">
+      <input type="text" id="vCode" required name="验证码">
+      <label id="vCodeLabel" for="cCode">验证码</label>
+      <canvas id="can" onclick="drawCode()"></canvas>
+    </div>
+    <a style="cursor: pointer;" id="register">
+      注册
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <a href="login.html" id="reLogin">返回登录</a>
+  </div>
+</div>
 </body>
 
 </html>
