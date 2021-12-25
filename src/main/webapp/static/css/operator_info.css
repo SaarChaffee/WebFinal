@@ -77,6 +77,7 @@ body #navigation #head {
 }
 .container h1 {
   position: relative;
+  width: 80%;
   left: 200px;
   margin-bottom: 0.25em;
   padding: 0;
