@@ -13,4 +13,6 @@ import java.sql.SQLException;
 
 public interface UserDao {
   public User getUser( Connection connection, String username ) throws SQLException;
+  
+  public int addUser( Connection connection, String username, String password ) throws SQLException;
 }
