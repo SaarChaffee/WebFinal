@@ -12,4 +12,6 @@ public interface UserService {
   public User getUser( String username, String password );
   
   public boolean addUser( String username, String password );
+  
+  public boolean isUserExist(String username);
 }

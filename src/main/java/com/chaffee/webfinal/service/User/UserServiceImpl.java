@@ -14,6 +14,7 @@ import com.mysql.cj.util.StringUtils;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserServiceImpl implements UserService {
   private UserDao userDao;
@@ -63,6 +64,34 @@ public class UserServiceImpl implements UserService {
     }
     if( result > 0 ){
       flag = true;
+    }
+    return flag;
+  }
+  
+  @Override
+  public boolean isUserExist( String username ) {
+    Connection connection = null;
+    boolean flag = false;
+    List<String> usersname = null;
+    
+    try{
+      if( username != null ){
+        connection = BaseDao.getConnection();
+        usersname = userDao.getUsersName( connection );
+      }
+    }catch( SQLException e ){
+      e.printStackTrace();
+    }finally{
+      BaseDao.close( connection, null, null );
+    }
+    
+    if( usersname != null ){
+      for( String s : usersname ){
+        if( username.equals( s ) ){
+          flag = true;
+          break;
+        }
+      }
     }
     return flag;
   }
