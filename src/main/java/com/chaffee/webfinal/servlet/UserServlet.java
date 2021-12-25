@@ -22,8 +22,11 @@ public class UserServlet extends HttpServlet {
   protected void doGet( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
     String method = req.getParameter( "method" );
     switch( method ){
-      case "login" ->{
+      case "login" -> {
         this.login( req, resp );
+      }
+      case "register" -> {
+        this.register( req, resp );
       }
     }
   }
@@ -33,21 +36,40 @@ public class UserServlet extends HttpServlet {
   
   }
   
-  protected void login( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException{
+  protected void login( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
     String userName = req.getParameter( "userName" );
     String passName = req.getParameter( "passName" );
     boolean flag = false;
-    User user=null;
+    User user = null;
     UserService userService = new UserServiceImpl();
     
-    user=userService.getUser( userName,passName );
-  
+    user = userService.getUser( userName, passName );
+    
     if( user != null ){
-      req.getSession().setAttribute( Constans.USER_SESSION,user );
-      resp.sendRedirect( req.getContextPath()+"/template/home.html" );
-    }else{
-      req.setAttribute( "error","用户名或密码错误" );
-      req.getRequestDispatcher( "/login.html" ).forward( req,resp );
+      req.getSession().setAttribute( Constans.USER_SESSION, user );
+      resp.sendRedirect( req.getContextPath() + "/template/home.html" );
+    }
+    else{
+      req.setAttribute( "error", "用户名或密码错误" );
+      req.getRequestDispatcher( "/login.html" ).forward( req, resp );
+    }
+  }
+  
+  protected void register( HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
+    String userName = req.getParameter( "userName" );
+    String passName = req.getParameter( "passName" );
+    boolean flag = false;
+    UserService userService = new UserServiceImpl();
+    
+    flag = userService.addUser( userName, passName );
+    
+    if( flag ){
+      req.setAttribute( "result", "success" );
+      req.getRequestDispatcher( "/register.html" ).forward( req, resp );
+    }
+    else{
+      req.setAttribute( "result", "fault" );
+      req.getRequestDispatcher( "/register.html" ).forward( req, resp );
     }
   }
 }
