@@ -1,8 +1,8 @@
 function image() {
   const width = 96;
   const heigh = 96;
-  var image = document.getElementById('source');
-  
+  var image = document.getElementById("source");
+
   var id = 0;
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 5; j++) {
@@ -17,7 +17,17 @@ function image() {
           console.log(canvas);
           var ctx = canvas.getContext("2d");
           // var ctx1 = canvas1.getContext("2d");
-          ctx.drawImage(image, j * width, i * heigh, width, heigh, 0, 0, width, heigh);
+          ctx.drawImage(
+            image,
+            j * width,
+            i * heigh,
+            width,
+            heigh,
+            0,
+            0,
+            width,
+            heigh
+          );
           // ctx1.drawImage(image, j * width, i * heigh, width, heigh, 0, 0, width, heigh);
         }
       }
@@ -31,14 +41,14 @@ function carousel() {
   let oImgList = document.querySelector(".img-list");
   const oCircle = document.querySelector(".circle-list");
   let cloneFirstImg = oImgList.firstElementChild.cloneNode(true);
-  const oWarp = document.getElementById("warp");
+  const oWarp = document.getElementById("carousel-warp");
   oImgList.appendChild(cloneFirstImg);
-  
+
   // 函数节流锁
   let lock = true;
   let imgIndex = 0;
   let maxIndex = 2;
-  
+
   function rightBtn() {
     if (!lock) return;
     oImgList.style.left = ++imgIndex * -936 + "px";
@@ -56,7 +66,7 @@ function carousel() {
       lock = true;
     }, 500);
   }
-  
+
   function leftBtn() {
     if (!lock) return;
     if (imgIndex === 0) {
@@ -76,17 +86,17 @@ function carousel() {
       lock = true;
     }, 500);
   }
-  
+
   oRight.addEventListener("click", () => {
     rightBtn();
   });
-  
+
   oLeft.addEventListener("click", () => {
     leftBtn();
   });
-  
+
   const circles = document.querySelectorAll(".circle");
-  
+
   function setCircle() {
     for (let i = 0; i < circles.length; i++) {
       if (i === imgIndex) {
@@ -96,7 +106,7 @@ function carousel() {
       }
     }
   }
-  
+
   function cricleClick(e) {
     if (e.target.nodeName.toLowerCase() === "li") {
       imgIndex = Number(e.target.getAttribute("data-n"));
@@ -104,15 +114,15 @@ function carousel() {
       setCircle();
     }
   }
-  
+
   oCircle.addEventListener("click", (e) => {
     cricleClick(e);
   });
-  
+
   let autoplay = setInterval(() => {
     rightBtn();
   }, 5000);
-  
+
   oWarp.addEventListener("mouseenter", () => {
     clearInterval(autoplay);
   });
@@ -128,4 +138,4 @@ function carousel() {
 window.onload = function () {
   image();
   carousel();
-}
+};
