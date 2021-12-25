@@ -24,25 +24,25 @@
             </div>
             <div class="registerBox">
                 <input type="password" id="passName" required name="passName">
-                <label for="passName">密码</label>
+                <label id="passNameLabel" for="passName">密码</label>
             </div>
             <div class="registerBox">
                 <input type="password" id="curPassName" required name="curPassName">
-                <label for="curPassName">再次输入密码</label>
+                <label id="curPassNameLabel" for="curPassName">再次输入密码</label>
             </div>
             <div class="registerBox">
                 <input type="text" id="vCode" required name="验证码">
-                <label for="cCode">验证码</label>
+                <label id="vCodeLabel" for="cCode">验证码</label>
                 <canvas id="can" onclick="drawCode()"></canvas>
             </div>
-            <a href="javascript:void(0)" id="register">
+            <a style="cursor: pointer;" id="register">
                 注册
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-            <a href="javascript:void(0)" id="reLogin">返回登录</a>
+            <a href="login.html" id="reLogin">返回登录</a>
         </div>
     </div>
 </body>
