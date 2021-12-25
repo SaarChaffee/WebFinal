@@ -94,8 +94,8 @@ body {
   position: absolute;
   top: 0;
   right: 5%;
-  border: 1px solid red;
-  height: 40px;
+  /* border: 1px solid red; */
+  height: 35px;
   width: 100px;
 }
 
