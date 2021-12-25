@@ -37,7 +37,7 @@ $(function () {
     } else if (passName.val() === null || passName.val() === "") {
       passName.focus();
     } else {
-      $.$.ajax({
+      $.ajax({
         type: "GET",
         url: "/user.do",
         data: {
