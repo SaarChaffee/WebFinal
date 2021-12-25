@@ -24,78 +24,79 @@ public class BaseDao {
       InputStream is = BaseDao.class.getClassLoader().getResourceAsStream( "config/db.properties" );
       Properties properties = new Properties();
       properties.load( is );
-      drive=properties.getProperty( "drive" );
-      url=properties.getProperty( "url" );
-      username=properties.getProperty( "username" );
-      password=properties.getProperty( "password" );
+      drive = properties.getProperty( "drive" );
+      url = properties.getProperty( "url" );
+      username = properties.getProperty( "username" );
+      password = properties.getProperty( "password" );
     }catch( IOException e ){
       e.printStackTrace();
     }
   }
   
-  public static Connection getConnection(){
+  public static Connection getConnection() {
     Connection connection = null;
     try{
-      Class.forName( drive);
-      connection= DriverManager.getConnection( url,username,password );
+      Class.forName( drive );
+      connection = DriverManager.getConnection( url, username, password );
     }catch( ClassNotFoundException | SQLException e ){
       e.printStackTrace();
     }
-  return connection;
-  
+    return connection;
+    
   }
   
-  public static ResultSet execute( Connection connection, PreparedStatement pstm, ResultSet rs, String sql, Object[] param ) throws SQLException {
+  public static ResultSet execute( Connection connection, PreparedStatement pstm, ResultSet rs, String sql,
+                                   Object[] param ) throws SQLException {
     pstm = connection.prepareStatement( sql );
     for( int i = 0; i < param.length; i++ ){
-      pstm.setObject( i+1,param[i] );
+      pstm.setObject( i + 1, param[i] );
     }
-    System.err.println("--------------------------execute--------------------------");
-    System.err.println(pstm.toString());
-    System.err.println("============================================================");
+    System.err.println( "--------------------------execute--------------------------" );
+    System.err.println( pstm.toString() );
+    System.err.println( "============================================================" );
     System.err.println();
-    rs=pstm.executeQuery();
+    rs = pstm.executeQuery();
     return rs;
   }
   
-  public static ResultSet execute(Connection connection,PreparedStatement pstm,String sql , Object[] param) throws SQLException {
-    pstm=connection.prepareStatement( sql );
+  public static int execute( Connection connection, PreparedStatement pstm, String sql, Object[] param ) throws SQLException {
+    pstm = connection.prepareStatement( sql );
     for( int i = 0; i < param.length; i++ ){
-      pstm.setObject( i+1,param[i] );
+      pstm.setObject( i + 1, param[i] );
     }
-    System.err.println("--------------------------execute--------------------------");
-    System.err.println(pstm.toString());
-    System.err.println("============================================================");
+    System.err.println( "--------------------------execute--------------------------" );
+    System.err.println( pstm.toString() );
+    System.err.println( "============================================================" );
     System.err.println();
-    return pstm.executeQuery();
+    return pstm.executeUpdate();
   }
   
-  public static boolean close(Connection connection,PreparedStatement pstm, ResultSet rs){
+  public static boolean close( Connection connection, PreparedStatement pstm, ResultSet rs ) {
     boolean flag = true;
     try{
       if( rs != null ){
         rs.close();
-        rs=null;
+        rs = null;
       }
       if( pstm != null ){
         pstm.close();
-        pstm=null;
+        pstm = null;
       }
       if( connection != null ){
         connection.close();
-        connection=null;
+        connection = null;
       }
     }catch( SQLException e ){
-      flag=false;
+      flag = false;
       e.printStackTrace();
     }
     return flag;
   }
   
   @Test
-  public void test(){
+  public void test() {
     Connection connection = BaseDao.getConnection();
-    System.out.println(connection);
+    System.out.println( connection );
   }
-
+  
 }
