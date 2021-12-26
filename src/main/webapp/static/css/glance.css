@@ -31,7 +31,9 @@ ul {
   margin-inline-end: 0px;
   list-style-image: url("../img/bullet-icon.svg");
 }
-
+li {
+  margin-bottom: 0.1em;
+}
 a {
   text-decoration: none;
   color: #0645ad;
@@ -88,7 +90,33 @@ body #head {
   height: 100%;
   width: 100%;
 }
-
+#p-personal {
+  position: absolute;
+  top: 6px;
+  right: 0.75em;
+  z-index: 1;
+  color: white;
+}
+#p-personal ul {
+  list-style: none none;
+  margin: 0;
+  color: white;
+  padding-left: 0;
+}
+#p-personal li {
+  margin-left: 0.75em;
+  padding-top: 0.5em;
+  line-height: 1.16666667;
+  font-size: 0.75em;
+  float: left;
+}
+#p-personal li a {
+  color: white;
+}
+#p-personal li a:hover {
+  text-decoration: underline;
+  color: #0645ad;
+}
 #content {
   margin-left: 11em;
 }
