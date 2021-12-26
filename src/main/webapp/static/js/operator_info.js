@@ -504,5 +504,5 @@ function refullscreen() {
   $(all).unbind("mousewheel");
   document.getElementById("fullOn").style.display = "block";
   document.getElementById("fullOff").style.display = "none";
-  changeStage0();
+  // changeStage0();
 }
