@@ -57,7 +57,7 @@ var startDrag = function (bar, target, callback) {
       target.style.left = parseInt(params.left) + disX + "px";
       target.style.top = parseInt(params.top) + disY + "px";
       
-      if (typeof callback == "function") {
+      if (typeof callback === "function") {
         callback(
             (parseInt(params.left) || 0) + disX,
             (parseInt(params.top) || 0) + disY
@@ -105,7 +105,7 @@ function widescreen() {
 
 function clearimg() {
   var dis = document.getElementById("clearui").style.display;
-  if (dis == "none") {
+  if (dis === "none") {
     document.getElementById("stage0btn").style.borderRadius = "0px";
     document.getElementById("stage0btn").style.backgroundColor =
         "rgba(0,0,0,.8)";
@@ -153,7 +153,7 @@ function clearimg() {
     
     document.getElementById("charname-en").style.opacity = "1";
     document.getElementById("charname").style.opacity = "1";
-    if (document.getElementById("widebtn").style.display == "none") {
+    if (document.getElementById("widebtn").style.display === "none") {
     } else {
       $(all).unbind("mousewheel");
     }
@@ -202,7 +202,7 @@ function clearimg() {
     document.getElementById("widebtn").style.transform = "translateX(305px)";
     document.getElementById("fullscbtn").style.transform = "translateX(305px)";
     document.getElementById("charImgmove").addEventListener("wheel", ctrlscale);
-    if (document.getElementById("widebtn").style.display == "none") {
+    if (document.getElementById("widebtn").style.display === "none") {
     } else {
       $(all).bind("mousewheel", function (event, delta) {
         return false;
@@ -245,7 +245,7 @@ function changeStage0() {
   clearexplain();
   clearfeatures();
   var dis = document.getElementById("skinbg").style.display;
-  if (dis == "none") {
+  if (dis === "none") {
     clearstage();
     document.getElementById("img-stage0").style.display = "block";
     document.getElementById("explain-stage0").style.display = "block";
@@ -261,7 +261,7 @@ function changeStage0() {
     document.getElementById("anime-bg").className = "skinbgcolor-out";
     document.getElementById("skinbg").className = "skinbg-out";
   }
-  if (document.getElementById("fullOn").style.display == "none") {
+  if (document.getElementById("fullOn").style.display === "none") {
     var sch = document.documentElement.clientHeight;
     document.getElementById("charimg").style.transform =
         "translateZ(0) scale(" + sch / 512 + ")";
@@ -296,7 +296,7 @@ function changeStage1() {
   clearexplain();
   clearfeatures();
   var o = document.getElementById("skinbg").style.display;
-  if (o == "none") {
+  if (o === "none") {
     clearstage();
     document.getElementById("img-stage1").style.display = "block";
     document.getElementById("explain-stage1").style.display = "block";
@@ -312,7 +312,7 @@ function changeStage1() {
     document.getElementById("skinbg").className = "skinbg-out";
     document.getElementById("features1").style.display = "block";
   }
-  if (document.getElementById("fullOn").style.display == "none") {
+  if (document.getElementById("fullOn").style.display === "none") {
     var sch = document.documentElement.clientHeight;
     document.getElementById("charimg").style.transform =
         "translateZ(0) scale(" + sch / 512 + ")";
@@ -348,7 +348,7 @@ function changeStage2() {
   clearexplain();
   clearfeatures();
   var o = document.getElementById("skinbg").style.display;
-  if (o == "none") {
+  if (o === "none") {
     clearstage();
     document.getElementById("img-stage2").style.display = "block";
     document.getElementById("explain-stage2").style.display = "block";
@@ -364,7 +364,7 @@ function changeStage2() {
     document.getElementById("skinbg").className = "skinbg-out";
     document.getElementById("features2").style.display = "block";
   }
-  if (document.getElementById("fullOn").style.display == "none") {
+  if (document.getElementById("fullOn").style.display === "none") {
     var sch = document.documentElement.clientHeight;
     document.getElementById("charimg").style.transform =
         "translateZ(0) scale(" + sch / 512 + ")";
@@ -406,7 +406,7 @@ function clearexplain() {
 }
 
 function fullscreen() {
-  if (document.getElementById("widebtn").style.display == "none") {
+  if (document.getElementById("widebtn").style.display === "none") {
     document.body.style.overflow = "auto";
     refullscreen();
   } else {
@@ -489,7 +489,7 @@ function refullscreen() {
   document.getElementsByClassName("charimg-wrapper")[0].style.left = "200px";
   document.getElementsByClassName("charimg-wrapper")[0].style.top = "50px";
   document.getElementById("widebtn").style.display = "inline";
-  if (document.getElementById("wideOn").style.display == "none") {
+  if (document.getElementById("wideOn").style.display === "none") {
     document.getElementById("wideOn").style.display = "block";
     document.getElementById("wideOff").style.display = "none";
   }
