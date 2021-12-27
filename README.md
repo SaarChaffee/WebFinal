@@ -6,4 +6,21 @@
 
 <h1>随便弄弄的web课设</h1>
 
-<h5>这是我第一个有一点前后端交互的东西（</h5>
+## 环境
+
+- `JDK 16.0.2`
+- `Maven 3.8.3`
+- `Tomcat 10.0.x`
+- `MySQL 8.0.x`
+
+## 配置
+
+数据库配置文件位于`src/main/resources/config/db.properties`
+
+```properties
+drive = 数据库驱动
+url = 连接地址
+username = 数据库角色名
+password = 角色密码
+
+```
