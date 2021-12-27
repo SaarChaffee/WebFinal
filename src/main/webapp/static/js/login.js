@@ -75,10 +75,9 @@ $(function () {
             alert("登陆成功，按确定进入主页");
             $(location).attr({href: "template/home.html"});
           } else if (response.result === "wrong") {
-            userNameLabel.text("用户名或密码错误");
-            userNameLabel.css({color: "#f00"});
-            passNameLabel.text("用户名或密码错误");
+            passNameLabel.text("密码错误");
             passNameLabel.css({color: "#f00"});
+            passName.onfocus();
           }
         },
       });
