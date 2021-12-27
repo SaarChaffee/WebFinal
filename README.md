@@ -18,9 +18,10 @@
 数据库配置文件位于`src/main/resources/config/db.properties`
 
 ```properties
-drive = 数据库驱动
-url = 连接地址
-username = 数据库角色名
-password = 角色密码
+drive = com.mysql.cj.jdbc.Driver
+url = jdbc:mysql://ip:port/数据库?useUnicode=true&characterEncoding=utf-8&useSSL=true（MySQL8推荐使用SSL连接）
+username =
+password =  
+
 
 ```
