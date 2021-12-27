@@ -53,7 +53,7 @@ $(function () {
       });
   
   login.on("click", function () {
-    if (userName.val() === null || userName.val() === "") {
+    if (userName.val() === null || userName.val() === "" || userNameLabel.text() === "用户不存在") {
       console.log("lo1");
       userName.focus();
     } else if (passName.val() === null || passName.val() === "") {
