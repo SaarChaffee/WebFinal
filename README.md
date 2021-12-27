@@ -20,8 +20,8 @@
 ```properties
 drive = com.mysql.cj.jdbc.Driver
 url = jdbc:mysql://ip:port/数据库?useUnicode=true&characterEncoding=utf-8&useSSL=true（MySQL8推荐使用SSL连接）
-username =
-password =  
+username = 数据库角色用户名
+password = 用户密码
 
 
 ```
